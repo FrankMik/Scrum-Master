@@ -1,17 +1,30 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #303030;
+  font-family: 'Quicksand', cursive;
+  background: url("background1.jpg") no-repeat center center fixed;
+  background-size: cover;
   text-align: center;
   padding: 50px;
+  position: relative;
+}
+
+/* Dunkles Overlay, damit der Text nicht untergeht */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* halbtransparentes Schwarz */
+  z-index: 0;
 }
 
 .container {
-  background-color: #fff;
-  border-radius: 10px;
+  position: relative; /* über das Overlay legen */
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.9); /* halbtransparent weiß */
+  border-radius: 15px;
   padding: 30px;
   max-width: 600px;
   margin: auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 h1 {
@@ -34,12 +47,15 @@ button {
   font-size: 18px;
 }
 
-.correct {
-  color: green;
-}
-
-.wrong {
+.feedback.wrong {
   color: red;
+  text-align: left;   /* Antworten linksbündig */
+  margin-top: 20px;
+}
+.feedback.correct {
+  color: green;
+  text-align: left;   /* Antworten linksbündig */
+  margin-top: 20px;
 }
 #quiz-container p:first-child {
   font-weight: bold;
@@ -54,4 +70,33 @@ button {
 .antworten label {
   display: block; /* jede Antwort in eigener Zeile */
   padding: 5px 0;
+}
+/* Fortschrittsbalken */
+.progress {
+  height: 12px;
+  background: #ddd;
+  border-radius: 6px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #4CAF50, #81C784);
+  transition: width 0.4s ease;
+}
+
+/* Punktestand */
+#score {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+.antworten label:hover {
+  background-color: rgba(0,0,0,0.05);
+  border-radius: 5px;
+  cursor: pointer;
 }
