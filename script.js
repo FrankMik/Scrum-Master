@@ -7,7 +7,7 @@ const quiz = [
         "Via interactions with the Product Owner",
         "At the Sprint Retrospective"
         ],
-    korrekt: [1, 3] // 1 und 3 sind richtig
+    korrekt: [0, 2] // 1 und 3 sind richtig
   },
   {
     frage: "Which of the following reflects Scrum's expectation of 'validated learning'?",
@@ -17,7 +17,7 @@ const quiz = [
           "Predictive Planning",
           "Sprint 0"
     ],
-    korrekt: [1] // nur 1 ist richtig
+    korrekt: [0] // nur 1 ist richtig
   },
   {
     frage: "What is the purpose of using a Sprint burndown chart in Scrum?",
