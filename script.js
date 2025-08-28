@@ -27,7 +27,7 @@ const quiz = [
         "To manage hours per task per team member",
         "To perform release planning"
     ],
-    korrekt: [2] // nur 2 ist richtig
+    korrekt: [1] // nur 2 ist richtig
   },
   {
     frage: "The Product Backlog should be transparent to the entire organization.",
@@ -35,7 +35,7 @@ const quiz = [
         "True",
         "False"
     ],
-    korrekt: [1] // 1 ist richtig
+    korrekt: [0] // 1 ist richtig
   },
    {
     frage: "How do you ensure that performance requirements are addressed by the Developers?",
